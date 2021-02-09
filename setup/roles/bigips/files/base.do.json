@@ -40,7 +40,7 @@
             "class": "DbVariables",
             "ui.advisory.enabled": true,
             "ui.advisory.color": "green",
-            "ui.advisory.text": "LAB BASE BIG-IP - CONFIGURE ME"
+            "ui.advisory.text": "LAB BASE BIG-IP"
         }
     }
 }
