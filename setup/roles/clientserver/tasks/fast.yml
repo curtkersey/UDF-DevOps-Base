@@ -10,4 +10,6 @@
   #name: f5devcentral/f5-fast-core
   #global: yes
   #become: yes
+  # there was a problem with this running, so I ran manually to make sure it was installed
+  # npm install @f5devcentral/f5-fast-core
 
