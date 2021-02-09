@@ -2,7 +2,8 @@
 # file: roles/servers/tasks/ubuntu.yml
 # Set the hostname and update /etc/hosts
 - name: Change the hostname
-  hostname: name="{{ inventory_hostname }}"
+  hostname: 
+    name: "{{ inventory_hostname }}"
   become: yes
 
 - name: Adjust /etc/hosts
@@ -11,6 +12,7 @@
     dest: /etc/hosts
     line: "{{ ansible_default_ipv4.address }} {{ inventory_hostname }} {{ ansible_hostname }}"
     regexp: "^{{ ansible_default_ipv4.address }}"
+  become: yes
 
 # Install Aptitude
 - name: Install aptitude using apt
