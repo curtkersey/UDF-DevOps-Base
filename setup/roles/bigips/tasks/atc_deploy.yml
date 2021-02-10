@@ -6,7 +6,20 @@
     name: f5devcentral.atc_deploy
   vars:
     atc_method: POST
+    #change atc_declaration_file back to 'base' if needed
     #atc_declaration_file: "base.do.json"
     atc_declaration_file: "{{inventory_hostname}}.do.json"
     atc_delay: 10
     atc_retries: 5
+
+# need to wrok out details on this one; until then comment out
+#- name: Onboard BIG-IP with application AS3
+#  include_role:
+#    name: f5devcentral.atc_deploy
+#  vars:
+#    atc_method: POST
+#    #atc_declaration_file: "base.do.json"
+#    atc_service: AS3
+#    atc_declaration_file: "{{inventory_hostname}}.as3.json"
+#    atc_delay: 10
+#    atc_retries: 5

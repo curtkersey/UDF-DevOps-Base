@@ -3,7 +3,7 @@
     "schemaVersion": "1.12.0",
     "class": "Device",
     "async": true,
-    "label": "BIG-IP02 standalone declaration for declarative onboarding",
+    "label": "BIG-IP01 standalone declaration for declarative onboarding",
     "Common": {
         "class": "Tenant",
         "mySystem": {
@@ -47,19 +47,12 @@
                 }
             ]
         },
-        "internal-localself": {
+        "internal-self": {
             "class": "SelfIp",
             "address": "10.1.10.7/24",
             "vlan": "internal",
             "allowService": "default",
             "trafficGroup": "traffic-group-local-only"
-        },
-        "internal-self": {
-            "class": "SelfIp",
-            "address": "10.1.10.99/24",
-            "vlan": "internal",
-            "allowService": "default",
-            "trafficGroup": "traffic-group-1"
         },
         "external": {
             "class": "VLAN",
@@ -72,24 +65,17 @@
                 }
             ]
         },
-        "external-localself": {
+        "external-self": {
             "class": "SelfIp",
             "address": "10.1.20.7/24",
             "vlan": "external",
             "allowService": "default",
             "trafficGroup": "traffic-group-local-only"
         },
-        "external-self": {
-            "class": "SelfIp",
-            "address": "10.1.20.99/24",
-            "vlan": "external",
-            "allowService": "default",
-            "trafficGroup": "traffic-group-1"
-        },
         "dbvars": {
             "class": "DbVariables",
             "ui.advisory.enabled": true,
-            "ui.advisory.color": "green",
+            "ui.advisory.color": "yellow",
             "ui.advisory.text": "AS3 BIG-IP"
         }
     }
