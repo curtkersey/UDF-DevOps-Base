@@ -34,7 +34,7 @@ control "Terraform Ready" do
   impact 1.0
   title "Terraform Ready"
   describe command('terraform -version') do
-    its('stdout') { should match /v0.12.29/ }
+    its('stdout') { should match /v0.14.6/ }
   end
 end
 

@@ -1,7 +1,15 @@
 ---
 # file: roles/appservers/tasks/nginx.yml
+- name: "nginx apt-get update"
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+  become: yes
+
 - name: ensure nginx is at the latest version
-  apt: name=nginx state=latest
+  apt: 
+    name: ['nginx']
+    state: latest
   become: yes
 
 - name: start nginx
